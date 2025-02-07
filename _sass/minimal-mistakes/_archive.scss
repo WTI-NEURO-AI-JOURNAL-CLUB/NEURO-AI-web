@@ -2,41 +2,19 @@
    ARCHIVE
    ========================================================================== */
 
-// .archive {
-//   margin-top: 1em;
-//   margin-bottom: 2em;
-
-//   @include breakpoint($large) {
-//     float: inline-end;
-//     width: calc(100% - #{$right-sidebar-width-narrow});
-//     padding-inline-end: $right-sidebar-width-narrow;
-//   }
-
-//   @include breakpoint($x-large) {
-//     width: calc(100% - #{$right-sidebar-width});
-//     padding-inline-end: $right-sidebar-width;
-//   }
-// }
-
 .archive {
   margin-top: 1em;
   margin-bottom: 2em;
 
-  // Adjusting padding to decrease left and right space
-  padding-inline-start: 1rem;  // Adjust this value to control left padding
-  padding-inline-end: 1rem;    // Adjust this value to control right padding
-
   @include breakpoint($large) {
     float: inline-end;
     width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-inline-end: $right-sidebar-width-narrow;  // Adjust this if needed
-    padding-inline-start: 1rem;  // Adjust the left padding in large breakpoints
+    padding-inline-end: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
-    padding-inline-end: $right-sidebar-width;  // Adjust this as per your needs
-    padding-inline-start: 1rem;  // Adjust the left padding in x-large breakpoints
+    padding-inline-end: $right-sidebar-width;
   }
 }
 
