@@ -4,6 +4,6 @@
 
 layout: home
 header:
-  image: assets/images/protein-molecule.png 
+  image: ./assets/images/protein-molecule.png 
 ---
 
