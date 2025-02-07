@@ -4,6 +4,6 @@
 
 layout: home
 header:
-  image: ./assets/images/protein-molecule.png 
+  image: neuro-ai-journal-club/assets/images/protein-molecule.png 
 ---
 
