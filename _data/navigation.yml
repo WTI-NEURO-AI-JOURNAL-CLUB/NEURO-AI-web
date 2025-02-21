@@ -12,9 +12,9 @@ main:
     # url: /_pages/resources/
   # - title: "Research"
   #   url: /_pages/research/
-  - title: "People"
-    url: /_pages/people/
-  - title: "News"
-    url: /_pages/news/
-  - title: "Contact"
-    url: /_pages/contact/
+  # - title: "People"
+  #   url: /_pages/people/
+  # - title: "News"
+  #   url: /_pages/news/
+  # - title: "Contact"
+  #   url: /_pages/contact/
