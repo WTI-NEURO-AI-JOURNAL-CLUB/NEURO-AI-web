@@ -21,8 +21,7 @@
 title: CNMI@WTI
 email: amelia.johnson.aj764@yale.edu
 description: >- # this means to ignore newlines until "baseurl:"
-    The Wu Tsai Institute's neuro-ai journal club is a space for researchers, students, and faculty to come together and discuss exciting papers in 
-    Neuro-AI. Example topics include: foundation models for neuroscience, neural dynamics, and network-brain alignment.
+    The Wu Tsai Institute's Neurocomputation Seminar Series is a space for researchers, students, and faculty to come together and discuss exciting work in neurocomputation, neuroscience, and AI.
 
   # Write an awesome description for your new site here. You can edit this
   # line in _config.yml. It will appear in your document head meta (for
