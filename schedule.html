@@ -85,7 +85,18 @@
 <link rel="icon" type="image/png" href="./assets/images/favicon.png">
     
 <!-- end custom head snippets -->
+<style>
+  .abstract-toggle {
+    margin: 0.4rem 0 0.6rem;
+    cursor: pointer;
+  }
 
+  .talk-abstract {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+</style>
+    
   </head>
 
   <body class="layout--home">
@@ -188,10 +199,29 @@
 
         <p><strong>September 18, 2026.</strong> No meeting due to time conflict with a <a href="https://wti.yale.edu/initiatives/grand-challenges" target="_blank">Grand Challenge 1</a> event.</p>
       
-        <p><strong>October 9, 2026.</strong> <i>External speaker:</i> Tatiana Engel (Princeton), talk title: TBA. Room 1116. </p>
-        <ul>
-          <li><a href="https://engel-lab.princeton.edu/" target="_blank">Speaker info</a></li>
-        </ul>
+        <p>
+          <strong>October 9, 2026.</strong>
+          <i>External speaker:</i>
+          <a href="https://engel-lab.princeton.edu/" target="_blank" rel="noopener">
+            Tatiana Engel (Princeton)
+          </a>
+          . Talk title: Closing the discovery loop with low-dimensional models and causal perturbations. Room 1116.
+        </p>
+
+        <button
+          class="abstract-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="engel-abstract"
+        >
+          Show abstract
+        </button>
+        
+        <div id="engel-abstract" class="talk-abstract" hidden>
+          <p>
+            Patterned photostimulation optogenetics enables unprecedented precision in perturbing neural circuits, yet often yields weak or counterintuitive effects due to the complexity of neural code. I will present modeling approaches that leverage low-dimensional structure in neural population activity to design effective and informative stimulation patterns. First, I will show that recurrent neural networks (RNNs) trained to replicate neural recordings are not sufficiently constrained by low-dimensional task-driven activity, undermining their ability to reliably predict perturbation effects. Instead, low-dimensional neural response data uniquely constrain a latent low-rank connectivity in RNNs, enabling accurate prediction of perturbation effects within the task-relevant subspace. Second, I will show how we combined optogenetic activation of glomerular patterns in the mouse olfactory bulb with low-dimensional models of glomerular odor responses to relate glomerular activity to olfactory percepts. We discovered that the olfactory code is low-dimensional and inherently structured for efficient odor representations, enabling the design of novel activation patterns with desired perceptual properties.
+          </p>
+        </div>
 
         <p><strong>October 23, 2026.</strong> <i>Trainee talk:</i> Siddarth Viswanath (Krishnaswamy Lab) and Luke Gong (Saxena Lab), talk titles: TBA. Room 1167.</p>
 
@@ -292,6 +322,18 @@
 
 
 
+<script>
+  document.querySelectorAll(".abstract-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const abstract = document.getElementById(button.getAttribute("aria-controls"));
+      const isOpen = button.getAttribute("aria-expanded") === "true";
 
+      button.setAttribute("aria-expanded", String(!isOpen));
+      button.textContent = isOpen ? "Show abstract" : "Hide abstract";
+      abstract.hidden = isOpen;
+    });
+  });
+</script>
+    
   </body>
 </html>
