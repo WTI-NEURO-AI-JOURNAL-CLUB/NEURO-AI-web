@@ -86,12 +86,23 @@
     
 <!-- end custom head snippets -->
 <style>
+  .talk-details {
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+  }
+
   .abstract-toggle {
-    margin: 0.4rem 0 0.6rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
     cursor: pointer;
+    font: inherit;
+    text-align: left;
   }
 
   .talk-abstract {
+    margin-top: 0.35rem;
     margin-bottom: 1rem;
     line-height: 1.5;
   }
@@ -200,22 +211,29 @@
         <p><strong>September 18, 2026.</strong> No meeting due to time conflict with a <a href="https://wti.yale.edu/initiatives/grand-challenges" target="_blank">Grand Challenge 1</a> event.</p>
       
         <p>
-          <strong>October 9, 2026.</strong>
+          <strong>October 9, 2026. Room 1116.</strong>
+        </p>
+
+        <p class="talk-speaker">
           <i>External speaker:</i>
           <a href="https://engel-lab.princeton.edu/" target="_blank" rel="noopener">
             Tatiana Engel (Princeton)
-          </a>
-          . Talk title: Closing the discovery loop with low-dimensional models and causal perturbations. Room 1116.
+          </a>.
         </p>
 
-        <button
-          class="abstract-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="engel-abstract"
-        >
-          Show abstract
-        </button>
+        <ul class="talk-details">
+          <li><i>Talk title:</i> Closing the discovery loop with low-dimensional models and causal perturbations.</li>
+          <li>
+            <button
+              class="abstract-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="engel-abstract"
+            >
+              <i>Abstract:</i> Show abstract
+            </button>
+          </li>
+        </ul>
         
         <div id="engel-abstract" class="talk-abstract" hidden>
           <p>
@@ -329,7 +347,7 @@
       const isOpen = button.getAttribute("aria-expanded") === "true";
 
       button.setAttribute("aria-expanded", String(!isOpen));
-      button.textContent = isOpen ? "Show abstract" : "Hide abstract";
+      button.innerHTML = isOpen ? "<i>Abstract:</i> Show abstract" : "<i>Abstract:</i> Hide abstract";
       abstract.hidden = isOpen;
     });
   });
